@@ -9,6 +9,18 @@
             "description": "Geo-Location to deploy SonicWall NSv"
         }
     },
+    "zone" : {
+      "type": "string",
+      "defaultValue": "1",
+      "allowedValues": [
+        "1",
+        "2",
+        "3"
+      ],
+      "metadata": {
+        "description": "Zone number for SonicWall NSv"
+      }
+    },
     "storageAccount": {
       "type": "string",
       "metadata": {
@@ -262,6 +274,9 @@
       "sku": {
         "name": "[parameters('publicIpSku')]"
       },
+      "zones": [
+        "[parameters('zone')]"
+      ],
       "properties": {
         "publicIPAllocationMethod": "[parameters('publicIpAllocationMethod')]",
         "dnsSettings": {
@@ -499,6 +514,9 @@
         "parameters": {
           "location": {
             "value": "[parameters('location')]"
+          },
+          "zone": {
+            "value": "[parameters('zone')]"
           },
           "vmName": {
             "value": "[parameters('vmName')]"
