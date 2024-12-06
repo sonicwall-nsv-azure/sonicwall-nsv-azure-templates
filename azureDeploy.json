@@ -117,6 +117,8 @@
         "Standard_DS5_v2",
         "Standard_B2ms",
         "Standard_B4ms",
+        "Standard_D8ds_v4",
+        "Standard_D8s_v3",
         "Standard_D2ds_v4",
         "Standard_D2s_v4",
         "Standard_D2_v4"
